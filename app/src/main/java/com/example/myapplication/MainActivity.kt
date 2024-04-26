@@ -100,6 +100,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+        println("are you the thing breaking")
         recyclerView.adapter = LocationAdapter(locations)
     }
 }

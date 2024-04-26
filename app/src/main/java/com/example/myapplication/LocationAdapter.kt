@@ -24,7 +24,10 @@ class LocationAdapter(private val locations: List<Location>) : RecyclerView.Adap
         // Set an OnClickListener
         nameView.setOnClickListener {
             val intent = Intent(it.context, TaskListActivity::class.java)
+            intent.putExtra("long", location.long)
+            intent.putExtra("lat", location.lat)
             intent.putExtra("tasks", location.activities.toTypedArray())
+            println("I need the sleep please work ;-;")
             it.context.startActivity(intent)
         }
     }
